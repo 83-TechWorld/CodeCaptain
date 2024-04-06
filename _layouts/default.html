@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- Include any CSS files or meta tags here -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+<header>
+    <!-- Navigation, site title, etc. -->
+    <h1>{{ site.title }}</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- Add additional navigation links here -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="profile">
+        <div class="profile-pic">
+            <img src="{{ '/assets/images/profile-pic.jpg' | relative_url }}" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2>About Me</h2>
+            <p>Add a brief introduction about yourself here.</p>
+            <h3>Skills</h3>
+            <p>Skill 1, Skill 2, Skill 3, Skill 4, Skill 5</p>
+        </div>
+    </div>
+
+    <div class="sections">
+        <section>
+            <h2>Challenges</h2>
+            <p>Add challenges here.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p>Add projects here.</p>
+        </section>
+        <section>
+            <h2>Experiences</h2>
+            <p>Add experiences here.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <!-- Footer content -->
+    <p>&copy; {{ site.author }} {{ site.year | date: "%Y" }}</p>
+</footer>
+
+</body>
+</html>
